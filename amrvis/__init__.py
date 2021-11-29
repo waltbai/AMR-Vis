@@ -5,7 +5,9 @@ import penman
 from graphviz import Digraph
 from penman.models import amr, noop
 
-DEFAULT_DIR = "./out/"
+
+_THIS_PATH = os.path.abspath(__file__)
+_DEFAULT_DIR = os.path.join(os.path.dirname(_THIS_PATH), "../out")
 
 
 def draw(amr_text, output_path=None, reverse=True, view=False):
@@ -24,7 +26,7 @@ def draw(amr_text, output_path=None, reverse=True, view=False):
     penman_graph = penman.decode(amr_text, model=model)
     # Construct graph
     if output_path is None:
-        output_path = os.path.join(DEFAULT_DIR, "default")
+        output_path = os.path.join(_DEFAULT_DIR, "default")
     if not os.path.exists(os.path.dirname(output_path)):
         os.makedirs(os.path.dirname(output_path))
     graph = Digraph(format="png", filename=output_path)
