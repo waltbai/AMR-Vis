@@ -1,2 +1,2 @@
-# AMRVis
-Visualization of AMR graph.
+# AMR-Vis
+Visualization for AMR graph.

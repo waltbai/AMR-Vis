@@ -1,0 +1,9 @@
+digraph {
+	p [label="permit-01" shape=ellipse]
+	g [label="go-02" shape=ellipse]
+	b [label=boy shape=ellipse]
+	p -> g [label=":ARG1"]
+	g -> b [label=":ARG0"]
+	"p--" [label="-" shape=box]
+	p -> "p--" [label=":polarity"]
+}

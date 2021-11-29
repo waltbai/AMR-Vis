@@ -1,0 +1,2 @@
+Penman>=1.2.1
+graphviz>=0.17
